@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balancer - Shop Closing Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="assets/images/logo.jpg" alt="Balancer Logo" class="logo">
+                <div class="header-text">
+                    <h1>Balancer</h1>
+                    <p>Shop Closing Management</p>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <main>
+                <div id="data-preview" aria-live="polite">
+                    <!-- Data tables will be dynamically inserted here -->
+                </div>
+                <div id="balance-check" aria-live="polite">
+                    <h2>Balance Check</h2>
+                    <div id="balance-result"></div>
+                </div>
+            </main>
+            <aside class="action-panel">
+                <button id="undo" class="action-btn" title="Undo" aria-label="Undo">
+                    <img src="assets/icons/undo.png" alt="" class="btn-icon">
+                </button>
+                <button id="redo" class="action-btn" title="Redo" aria-label="Redo">
+                    <img src="assets/icons/redo (1).png" alt="" class="btn-icon">
+                </button>
+                <button id="generate-report" class="action-btn" title="Generate Report" aria-label="Generate Report">
+                    <img src="assets/icons/generate-report.png" alt="" class="btn-icon">
+                </button>
+                <button id="view-previous-report" class="action-btn" title="View Previous Report" aria-label="View Previous Report">
+                    <img src="assets/icons/view-report.png" alt="" class="btn-icon">
+                </button>
+                <button id="theme-toggle" class="action-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                    <img src="assets/icons/light-theme.png" alt="" class="btn-icon" id="theme-icon">
+                </button>
+            </aside>
+        </div>
+    </div>
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Add New Entry</h2>
+            <form id="entry-form">
+                <!-- Form fields will be dynamically inserted here -->
+            </form>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
